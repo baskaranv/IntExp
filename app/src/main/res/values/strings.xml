@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">IntEx</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="login">Login</string>
+    <string name="dash_board">Dash Board</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="enter_your_question">Enter your question</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+
+    <string-array name="question_list" >
+        <item>What is memory management?</item>
+        <item>What is Coroutine builders?</item>
+        <item>What you mean by Coroutine Dispatcher?</item>
+    </string-array>
+
+</resources>
