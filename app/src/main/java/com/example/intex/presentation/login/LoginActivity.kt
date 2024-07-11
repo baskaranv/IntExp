@@ -22,14 +22,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
-        dataBinding.edtUserName.setText("admin@gmail.com")
-        dataBinding.edtTxtPassword.setText("admin")
+       // dataBinding.edtUserName.setText("admin@gmail.com")
+      //  dataBinding.edtTxtPassword.setText("admin")
         dataBinding.btnLogin.setOnClickListener {
             val userName = dataBinding.edtUserName.text.toString()
             val password = dataBinding.edtTxtPassword.text.toString()
             viewModel.validateUser(userName, password)
         }
-        dataBinding.btnLogin.callOnClick()
+      //  dataBinding.btnLogin.callOnClick()
         viewModel.loginResult.observe(this) { result ->
             when (result) {
                 "Success" ->

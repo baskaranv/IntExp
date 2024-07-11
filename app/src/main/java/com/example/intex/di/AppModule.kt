@@ -12,6 +12,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -30,6 +31,8 @@ object AppModule {
     fun providesUserRepo(db: IntExDatabase): UserRepository{
         return UserRepositoryImpl(db)
     }
+
+
 
     @Provides
     fun providesQuestionRepo(db: IntExDatabase) : QuestionRepository{

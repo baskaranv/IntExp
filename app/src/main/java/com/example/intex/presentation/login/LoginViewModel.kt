@@ -24,6 +24,7 @@ class LoginViewModel @Inject  constructor(
     val user: LiveData<User> get() = _user
 
     fun validateUser(email: String, password: String){
+        _loginResult.postValue("Not a valid user")
         if(email.isEmpty()){
             _loginResult.postValue("Invalid user Name")
             return
@@ -37,7 +38,11 @@ class LoginViewModel @Inject  constructor(
             _loginResult.postValue("Invalid username or password")
             return
         }
-        _loginResult.postValue("Success")
+
+        if(email=="admin@gmail.com" && password=="admin" ){
+            _loginResult.postValue("Success")
+        }
+
     }
 
     fun saveUser(user : User){
